@@ -16,10 +16,18 @@ function Redirect() {
   }, [News,Newss])
 
   return (
+    <div>
+    <div className='  d-flex ' style={{alignItems:'center',justifyContent:'space-between',marginBottom:'2vw',backgroundColor:'#af9ad6'}}>
+      
+      <Link to='/' style={{textDecoration:'none',fontSize:'30px',fontWeight:'600',color:'red',padding:' 1vw ', paddingLeft:'3vw'}}>News</Link>
+      <div style={{display:'flex',alignContent:'center',padding:'1vw ',paddingLeft:'5vw' }}>
+      
+ <Link to='/favorite' style={{paddingLeft:'2vw',fontSize:'22px',fontWeight:'500',color:'blue',textDecoration:'none'}}>Faviourit</Link>
+
+      </div>
+    </div>
     <div className='d-flex container' style={{ justifyContent: 'center', flexDirection: 'column' }}>
-      <a style={{ fontSize: '4.2vw', fontWeight: '600', margin: '20px 0', alignSelf: 'center' }}>Daily News</a>
-      <Link to='/favorite' className='rounded-pill' style={{ textDecoration:'none',alignSelf:'center', padding:'3px 6px',wordWrap: 'break-word',fontSize:'2.3vw',border:'1.3px solid black',backgroundColor:'#2a71eb',color:'white',marginBottom:'3vw'}}>Show Fevorite News</Link>
-       {News ||Newss ? (spenner ? <img src='./spin.gif' style={{ width: '10vw' }} /> :
+        {News ||Newss ? (spenner ? <img src='./spin.gif' style={{ width: '10vw' }} /> :
         <>
           <div className='shadow-lg p-3 mb-5 bg-body rounded' style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '15 ', flexDirection: 'column' }}     >
             <div className='m-3 ' style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}  >
@@ -47,6 +55,7 @@ function Redirect() {
 
         : <a>loading....</a>}
 
+    </div>
     </div>
   )
 }
